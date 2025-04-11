@@ -28,7 +28,7 @@ def download_video():
         return jsonify({"error": "Invalid YouTube URL"}), 400
 
     try:
-        yt = YouTube(url)
+        yt = YouTube(url, client='WEB')
         print(f"Video title: {yt.title}")  # Debugging line
 
         # Debugging: print available streams
